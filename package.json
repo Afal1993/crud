@@ -1,0 +1,11 @@
+{
+  "name": "alexandre",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "alexandre",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "moment": "^2.29.1"
+  }
+}
