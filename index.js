@@ -9,11 +9,17 @@ const cursos =['Fullstack Master', 'Desenvolvimento de Games', 'Viver de youtube
 //retorna um curso \/
 server.get('/cursos/:index', (req, res) => {
     const { index } = req.params;
+    
     return res.json(cursos[index]);
 });
 
 //retorna todos os cursos \/
 server.get('/cursos', (req, res) => {
+    const { name } = req.query;
+    if(name) {
+        cursos.push(name);
+    }
+
     return res.json(cursos);
 });
 
@@ -45,4 +51,6 @@ server.delete('/cursos/:index', (req, res) => {
 });
 
 
-server.listen(3000);
+server.listen(3000, () => {
+    console.log('Server is running on port 3000.');
+})
